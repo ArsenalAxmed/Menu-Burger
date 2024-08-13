@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #212121;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    width: 500%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 20%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 15px;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 90%, 0% 90%);
+}
+
+.description {
+    text-align: center;
+}
+
+.cheese-burger {
+    color: #424242;
+}
+
+.burger-arena {
+    display: flex;
+    align-items: center;
+    color: #FFB30E;
+}
+
+.burger-arena img {
+    width: 14px;
+    height: 22px;
+    margin-right: 5px;
+}
+
+.price {
+    display: block;
+    margin: 10px 0;
+    width: 54px;
+    height: 26px;
+    text-align: center;
+}
+
+.order-btn {
+    background-color: #F17228;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.carousel-controls {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.control-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .carousel-images {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-images {
+    transform: translateX(-20%);
+}
+
+#slide3:checked ~ .carousel-images {
+    transform: translateX(-40%);
+}
+
+#slide4:checked ~ .carousel-images {
+    transform: translateX(-60%);
+}
+
+#slide5:checked ~ .carousel-images {
+    transform: translateX(-80%);
+}
